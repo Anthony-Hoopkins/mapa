@@ -26,10 +26,12 @@ import mapConst             from "../constants/Map"
 class Main extends Component {
   
   render(){
+    
     const { dispatch, search, view, server, map, form, url, user, t } = this.props;
     const { entries, ratings } = server;
-
+    
     this.changeUrlAccordingToState(url);
+    this.changePageTile();
     const visibleEntries = this.filterVisibleEntries(entries, search);
     const loggedIn = user.username ? true : false;
     
@@ -141,6 +143,8 @@ class Main extends Component {
 
         <Swipeable onSwipedRight={ (e, deltaX) => this.swipedRightOnMap(e, deltaX) } className="center">
           <Map
+            iframeUrl={url.hash}
+            subscribe={{i: search.current, t: search.text, g: map.bbox}}
             marker={ (view.left === V.EDIT || view.left === V.NEW) ? map.marker : null}
             highlight={ search.highlight }
             center={ map.center}
@@ -251,7 +255,10 @@ class Main extends Component {
     this.props.dispatch(Actions.setSearchText('#'+t));
     this.props.dispatch(Actions.search());
   };
-
+  changePageTile() {
+    document.title = i18n.t('title');
+    i18n.on('languageChanged', () => document.title = i18n.t('title'));
+  }
 }
 
 Main.propTypes = {
@@ -272,13 +279,13 @@ const GlobalStyle = createGlobalStyle`
   
   @import url('https://fonts.googleapis.com/css?family=PT+Sans&display=swap');
   
+
   @media only screen and (max-width: 600px) {
     body { font-size:80%;}
   }
 
   h1, h2, h3, h4, h5, h6, h7 {
     font-family: ${STYLE.headerFont};
-    
   }
   
   html, button, input, select, textarea {
@@ -292,7 +299,8 @@ const fadein = keyframes`
   to { opacity: 1; }
 `
 
-import pincloud from "../img/pincloud.png";
+import logoBel from '../img/logoBel.png'
+import i18n from "../i18n";
 
 const MenuFontAwesomeIcon = styled(FontAwesomeIcon)`
   padding-right: .45rem;
@@ -370,7 +378,7 @@ const RightPanel = styled.div `
       width: 3.5em;
       height: 1.2em;
       background-position: left;
-      background-image: url(${pincloud});
+      background-image: url(${logoBel});
       background-repeat: no-repeat;
       background-size: 50%;
     }
@@ -454,7 +462,7 @@ const StyledApp = styled.div `
     font-size: 24px;
     margin-bottom: 10px;
   }
-  
+
   button {
     font-family: ${STYLE.bodyFont};
     &.pure-button i {
@@ -483,13 +491,18 @@ const StyledApp = styled.div `
 
   .pure-menu-list {
     margin: 0 50px;
+    padding-left: 60px;
   }
-  
+  .menu-list {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 60px;
+  }
   .pure-menu-link {
     font-family: PT Sans;
     font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
+    font-weight: normal;
+    font-size: 18px;
     line-height: 31px;    
     color: #FFFFFF;
     padding: .5em 0.5em;
@@ -498,6 +511,7 @@ const StyledApp = styled.div `
   .pure-menu-link:hover {
     color: #fff;
   }
+
 
 
   label span.desc {
@@ -536,7 +550,9 @@ const StyledApp = styled.div `
     position: relative;
     z-index: 10;
     color: #eee;
-    text-align: center;    
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
     .banner-link {
       color: #000;
     }

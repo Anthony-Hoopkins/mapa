@@ -1,4 +1,10 @@
 {
+	"mapButtons": {
+		"center": "Show my position",
+		"far": "Zoom out",
+		"closer": "Zoom in"
+	},
+	"title": "Mapa",
 	"entryForm": {
 		"category": {
 			"initiative": "Initiative (commitment, inspiration & change)",
@@ -17,7 +23,7 @@
 		"description": "Description",
 		"tags": "Tags (separate by comma)",
 		"newTag": "New:",
-		"noTagSuggestion": "Type for sugestions.",
+		"noTagSuggestion": "Type for suggestions.",
 		"tagsLoading": "Loading suggestions…",
 		"homepage": "Homepage",
 		"phone": "Phone",
@@ -207,12 +213,12 @@
 			"donate": "Donate",
 			"login": "Login",
 			"logout": "Logout",
-			"goals": "goals",
-			"for-whom": "for who",
-			"principles": "principles",
-			"how-works": "work",
-			"team": "team",
-			"partners": "partners"
+			"goals": "Goals",
+			"for-whom": "For whom",
+			"principles": "Principles",
+			"how-works": "Work",
+			"team": "Team",
+			"partners": "Partners"
 		},
 		"slogan": "Mapping for Good",
 		"city-search": {
@@ -288,8 +294,9 @@
 		}
 	},
 	"landingExplain": {
+		"button": "Fill out the form!",
 		"chapter1": {
-			"heading": "The world is full of explorers, and full of things to be explored.",
+			"heading": " - The world is full of explorers, and full of things to be explored.",
 			"name": "Map of tomorrow",
 			"paragraph1": {
 				"heading": "Discover places from an inspiring point of view.",
@@ -305,27 +312,27 @@
 			}
 		},
 		"chapter2": {
-			"heading": "How to use the von morgen map",
-			"text": "We want to increase the trust between public organizations and a wide range of citizens, so Mapai:",
-			"subtext-1": " - increased transparency and visibility of public initiatives for a wide range.",
-			"subtext-2": " - deepening the interaction between initiatives, activists and the public.",
-			"subtext-3": "- Create a cooperation of IT volunteers with other activists."
+			"heading": "Our goals",
+			"text": "We want to increase the trust between public organizations and a wide range of citizens, so Map can help to: ",
+			"subtext-1": " - increase transparency and visibility of public initiatives for a wide range.",
+			"subtext-2": " - deep the interaction between initiatives, activists and the public.",
+			"subtext-3": "- create a cooperation of IT volunteers with other activists."
 		},
 		"chapter3": {
-			"heading": "We have a vision",
+			"heading": "For whom",
 			"text": {
 				"1": "von morgen supports creativity, sustainability and joint action.",
 				"2": "We believe in a modern society in wich we all can embrace a self-determined, content and environmental-friendly life. Our goal: a benevolent future."
 			},
 			"column-1-head": "citizens",
-			"column-1": " - finding initiatives, similar in values ​​and vluchatstsa in their activities.",
+			"column-1": " - finding initiatives, similar in values ​​and participate in their activities.",
 			"column-2-head": "organizations",
 			"column-2": "- finding initiatives, congenial, and create partnerships.",
 			"column-3-head": "activists",
 			"column-3": "- initiatives to find and place them on the map, making their work visible to the wider society."
 		},
 		"chapter4": {
-			"heading": "Are you with us?",
+			"heading": "Principles",
 			"text": {
 				"1": "Support our project",
 				"2": "Become a local scout",
@@ -338,15 +345,15 @@
 			"learnMore": "more"
 		},
 		"chapter5": {
-			"heading": "How it works",
+			"heading": "How you may help",
 			"column-1-head": "Online",
 			"column-1-1": "Visitors can Maps ",
 			"column-1-2": "1. Add and modify data.",
 			"column-1-3": "2. Search and filter company by region.",
 			"column-2-head": "Offline",
-			"column-2-1": "1. Hackathon work together activists and aytsivalantsorav.",
+			"column-2-1": "1. Hackathon work together activists and IT-volunteers.",
 			"column-2-2": "2. advise and teach the use of Mapai.",
-			"column-2-3": "3. Educational lectures on aopensors and community interaction.",
+			"column-2-3": "3. Educational lectures on opensource and community interaction.",
 			"text": "Das Team von morgen ist so bunt wie der Wandel. Ehemalige entwicklungspolitische Freiwillige, Studierende, Wandelgestalter*innen und Stipendiaten - Menschen, die sich ehrenamtlich für die Gesellschaft von morgen einsetzen wollen.",
 			"new-members": "We are always looking for new members!",
 			"graphic-design": "Graphic Design",
@@ -366,7 +373,7 @@
 			"linus": "Global Sociology"
 		},
 		"chapter6": {
-			"heading": "A project by",
+			"heading": "Our team",
 			"text-heading": "Team",
 			"text": " - a dense and regular work of like-minded team to achieve greater openness and dynamism of the Belarusian society with the help of maps. Ready to be the case?",
 			"team-name-1": "Activist",
@@ -379,7 +386,7 @@
 			"team-description-4": "Role"
 		},
 		"chapter7": {
-			"heading": "Our partners",
+			"heading": "How to participate",
 			"boell-foundation": "In its pilot phase this project has been supported by the Heinrich-Böll-Foundation.",
 			"text": {
 				"1": "1. Help to write code.",
@@ -391,19 +398,20 @@
 			"heading": "Donate!"
 		},
 		"chapter9": {
-			"heading": "Activists"
+			"heading": "Our partners",
+			"infoPartners": "Info partners"
 		},
 		"chapter10": {
 			"heading": "How to contact us",
 			"text": {
 				"1": "Write your opinion on mail",
 				"email": "falanster.by@gmail.com",
-				"2": "Write us for any queations",
+				"2": "Write us for any questions",
 				"telegram": "Telegram",
 				"3": "Or coments on",
 				"github": "Github",
 				"4": "You can find us on adress:",
-				"address": "city Minsk, st.З.Buadyli, 3, ap.2Н ('Фаланстэр')"
+				"address": "city Minsk, Zm.Buadyli str., 3, ap.2N ('Falanster')"
 			}
 		}
 	},
@@ -519,6 +527,23 @@
 			"text": "Events are not yet supported at the moment. \n\n Whether it's a conference, workshop or festival - they are part of the von morgen map. We are also planning an event calendar that displays and exports the results. \n\n To make this feature available soon, take part in our fund-raising campaign on www.betterplace.org!",
 			"close": "Close",
 			"donate": "Donate"
+		}
+	},
+	"IframeMainView": {
+		"title": "code",
+		"buttonName": "copy",
+		"advanced": "advanced options",
+		"advancedOptions": {
+			"errors":{
+				"digits": "Only digits",
+				"hight": "Too hight",
+				"zero": "Zero can't been first",
+				"whitespace": "No whitespace!"
+			},
+			"width": "width",
+			"heigth": "heigth",
+			"hashtag": "hashtag",
+			"getCode": "get code"
 		}
 	}
 }
